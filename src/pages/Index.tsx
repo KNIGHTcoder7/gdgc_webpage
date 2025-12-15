@@ -13,10 +13,10 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <InstagramSection />
         <AboutSection />
         <TeamSection />
         <EventsSection />
+        <InstagramSection />
         <ContactSection />
       </main>
       <Footer />

@@ -1,0 +1,71 @@
+.curved-loop-jacket {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 32px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-weight: 700;
+  text-transform: none;
+  line-height: 1;
+}
+
+.curved-loop-jacket {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+
+  /* Google Colors Gradient */
+  fill: url(#googleGradient);
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  text-transform: none;
+}
+
+.curved-loop-text {
+  font-size: 2.25rem; /* approx text-2xl */
+  fill: currentColor;
+}
+
+@media (min-width: 768px) {
+  .curved-loop-text {
+    font-size: 3rem; /* approx text-4xl */
+  }
+}
+
+/* Animate the SVG text fill through Google-like colors */
+.curved-loop-text {
+  animation: googleColors 6s infinite linear;
+}
+
+@keyframes googleColors {
+  0%   { fill: #4285F4; }
+  25%  { fill: #DB4437; }
+  50%  { fill: #F4B400; }
+  75%  { fill: #0F9D58; }
+  100% { fill: #4285F4; }
+}
