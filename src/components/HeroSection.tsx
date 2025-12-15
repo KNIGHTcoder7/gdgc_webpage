@@ -15,7 +15,7 @@ export const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex items-center justify-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -55,33 +55,7 @@ export const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Image Carousel Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            className="relative"
-          >
-            <div className="glass-card p-4 rounded-3xl overflow-hidden glow-effect">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                <img
-                  src={gdgGroupPhoto}
-                  alt="GDG On Campus MLRIT Community"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-lg font-medium text-foreground">Tenure 2025 - 26</p>
-              </div>
-              {/* Carousel Dots */}
-              <div className="flex justify-center gap-2 mt-4">
-                <div className="w-2 h-2 rounded-full bg-foreground" />
-                <div className="w-2 h-2 rounded-full bg-muted-foreground/50" />
-                <div className="w-2 h-2 rounded-full bg-muted-foreground/50" />
-              </div>
-            </div>
-          </motion.div>
+          {/* Right content removed as requested */}
         </div>
       </div>
     </section>
