@@ -1,19 +1,16 @@
 import { motion } from 'framer-motion';
-import CurvedLoop from './CurvedLoop';
+import gdgHeroLogo from '@/assets/gdg-hero-logo.png';
 
 export const HeroSection = () => {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
-    >
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-google-blue/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-google-green/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,40 +18,29 @@ export const HeroSection = () => {
           className="w-full"
         >
           <div className="relative w-full">
-            {/* Background image (decorative) */}
+            {/* Decorative background banner */}
             <img
               src="/gdg-banner.png"
               alt=""
               aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover opacity-40 blur-sm pointer-events-none"
+              className="absolute inset-0 w-full h-full object-cover opacity-30 blur-sm pointer-events-none"
             />
 
-            {/* CurvedLoop behind heading (non-interactive) */}
-            <div className="absolute inset-x-0 top-8 flex justify-center pointer-events-none">
-              <CurvedLoop
-                marqueeText="Welcome to Google Developer Groups — On Campus • MLRIT"
-                speed={1.5}
-                curveAmount={420}
-                direction="left"
-                interactive={false}
-                useGradient={true}
-                className="curved-loop-text text-3xl md:text-5xl lg:text-6xl"
-              />
-            </div>
+            {/* CurvedLoop will be rendered below content (non-absolute) */}
 
-            {/* Foreground content */}
-            <div className="relative z-20 mt-40 lg:mt-56 text-center lg:text-left">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
-                  Empowering{' '}
-                  <span className="google-gradient-text">Tech Skills</span>
-                </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground font-light">
-                  Unleashing Learning and Collaboration!
-                </p>
-              </div>
+            {/* Foreground content (centered) */}
+            <div className="relative z-20 flex flex-col items-center justify-center text-center py-8 mt-6">
+              <img src={gdgHeroLogo} alt="GDG logo" className="w-96 md:w-[560px] lg:w-[720px] mx-auto mb-6 -mt-12" />
 
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight">
+                Empowering <span className="google-gradient-text">Tech Skills</span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-muted-foreground font-light mt-4">
+                Unleashing Learning and Collaboration!
+              </p>
+
+              <div className="flex flex-wrap gap-4 justify-center mt-8">
                 <a
                   href="#events"
                   className="px-8 py-3 bg-primary text-primary-foreground font-medium rounded-full hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
@@ -68,6 +54,8 @@ export const HeroSection = () => {
                   Learn More
                 </a>
               </div>
+
+            {/* CurvedLoop removed per request */}
             </div>
           </div>
         </motion.div>
